@@ -1,0 +1,19 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "私人文档托管",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiamao/nodejs.git"
+  },
+  "author": "jiamao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jiamao/nodejs/issues"
+  },
+  "homepage": "https://github.com/jiamao/nodejs#readme"
+}
