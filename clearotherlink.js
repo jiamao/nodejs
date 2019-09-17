@@ -2,7 +2,7 @@
 const path = require('path');
 const fs = require('fs');
 const googlelink = /\<link\s+[^\>]*?googleapis\.com[^\>]*?\>/g;
-
+const nodejsorg = /http(s)?:\/\/nodejs.org/g;
 const sourcePath = path.join(__dirname, 'nodejs.org/build');
 
 eachDirection(sourcePath);
@@ -35,7 +35,7 @@ function clearLinks(f) {
     console.log(`clear ${f}`);
 
     let content = fs.readFileSync(f, 'utf8');
-    let tmp = content.replace(googlelink, '');
+    let tmp = content.replace(googlelink, '').replace(nodejsorg, '');
     if(tmp != content) {
         fs.writeFileSync(f, tmp);
     }
