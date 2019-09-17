@@ -4,6 +4,7 @@
   "description": "私人文档托管",
   "main": "index.js",
   "scripts": {
+    "update": "cd nodejs.org && git pull && npm i && npm run build && cd .. && node ./clearotherlink.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

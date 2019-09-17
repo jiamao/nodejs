@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 const googlelink = /\<link\s+[^\>]*?googleapis\.com[^\>]*?\>/g;
 
-const sourcePath = path.join(__dirname, 'build');
+const sourcePath = path.join(__dirname, 'nodejs.org/build');
 
 eachDirection(sourcePath);
 
