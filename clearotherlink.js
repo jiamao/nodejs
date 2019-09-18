@@ -35,7 +35,10 @@ function clearLinks(f) {
     console.log(`clear ${f}`);
 
     let content = fs.readFileSync(f, 'utf8');
-    let tmp = content.replace(googlelink, '').replace(nodejsorg, '');
+    let tmp = content.replace(googlelink, '')
+            .replace(nodejsorg, '')
+            .replace('<title>Node.js</title>', '<title>Nodejs 中文网</title>')
+            .replace("Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.", 'nodejs中文文档: Node.js 是一个基于 Chrome V8 引擎 的 JavaScript 运行时');
     if(tmp != content) {
         fs.writeFileSync(f, tmp);
     }
