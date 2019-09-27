@@ -39,6 +39,16 @@ function clearLinks(f) {
             .replace(nodejsorg, '')
             .replace('<title>Node.js</title>', '<title>Nodejs 中文网</title>')
             .replace("Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.", 'nodejs中文文档: Node.js 是一个基于 Chrome V8 引擎 的 JavaScript 运行时');
+    
+    tmp += `\n<script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?613a7fd866ad93268e4a516d8dfb9c8b";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>`;
     if(tmp != content) {
         fs.writeFileSync(f, tmp);
     }
